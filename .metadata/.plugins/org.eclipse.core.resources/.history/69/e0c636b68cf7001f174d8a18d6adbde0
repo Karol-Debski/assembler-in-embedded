@@ -1,0 +1,16 @@
+/*
+ * systick.h
+ *
+ *  Created on: Mar 2, 2025
+ *      Author: Karol
+ */
+
+#ifndef INC_SYSTICK_H_
+#define INC_SYSTICK_H_
+
+#include <stdint.h>
+
+void SysTickTimerConfig(uint32_t* stk_ctrl_addr, uint32_t* stk_ctrl_addr);
+void EnalbeCounter(uint32_t* stk_ctrl_addr);
+
+#endif /* INC_SYSTICK_H_ */

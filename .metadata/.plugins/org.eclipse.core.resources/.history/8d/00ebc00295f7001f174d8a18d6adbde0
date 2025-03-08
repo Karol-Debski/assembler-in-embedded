@@ -1,0 +1,46 @@
+  .syntax unified
+  .cpu cortex-m4
+  .fpu softvfp
+  .thumb
+
+.global  main
+.global SysTick_Handler
+.section .text.SysTick_Handler
+.type SysTick_Handler, %function
+
+
+.extern rcc_config
+.extern moder_config
+.extern flip_led_state
+
+#include "led_def.h"
+// led i timer stworz
+// main i przerwanie w asm
+// wywolaj wszystko w .S
+
+
+.text
+
+
+main:
+
+ ldr r0, =RCC_AHB1ENR_ADDR
+ bl rcc_config
+
+ ldr r0, =GPIOD_MODER_ADDR
+ bl moder_config
+
+ ldr r0, =GPIOD_ODR_ADDR
+ bl flip_led_state
+
+
+ bx lr
+
+/*--------------*/
+SysTick_Handler:
+ push {lr}
+ bl flip_led_state
+ pop {lr}
+
+ bx lr
+/*--------------*/

@@ -1,0 +1,25 @@
+/*
+ * systick.c
+ *
+ *  Created on: Mar 2, 2025
+ *      Author: Karol
+ */
+
+#include <stdint.h>
+#include <systick_def.h>
+
+
+void SysTickTimerConfig(uint32_t* stk_ctrl_addr, uint32_t* stk_load_addr)
+{
+   //set processor clock (16Mhz by default) as source
+   *stk_ctrl_addr |= (1U << 2);
+   //enable exception request
+   *stk_ctrl_addr |= (1U << 1);
+   /* config reload register */
+   *stk_load_addr = 15999 * PERIOD_BLINK_IN_MS;
+}
+
+void EnalbeCounter(uint32_t* stk_ctrl_addr)
+{
+   *stk_ctrl_addr |= 1U;
+}

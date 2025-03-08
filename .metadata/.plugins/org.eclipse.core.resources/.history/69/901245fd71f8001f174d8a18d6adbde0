@@ -1,0 +1,26 @@
+  .syntax unified
+  .cpu cortex-m4
+  .fpu softvfp
+  .thumb
+
+.global  main
+
+.extern tab1, tab2, num
+
+.text
+
+main:
+
+ //dst
+ ldr r0, =tab1
+ //src
+ ldr r0, =tab2
+ //size in bytes
+ ldr r0, =num
+
+
+ bl memcpy
+
+loop:
+ b loop
+

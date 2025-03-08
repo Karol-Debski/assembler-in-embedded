@@ -1,0 +1,17 @@
+12:37:31 **** Incremental Build of configuration Debug for project asm-with-c-special-functions ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Src/interrupt_control.d" -MT"Src/interrupt_control.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/interrupt_control.o" "../Src/interrupt_control.S"
+arm-none-eabi-gcc -o "asm-with-c-special-functions.elf" @"objects.list"   -mcpu=cortex-m4 -T"G:\projects\assembler-in-embedded\asm-with-c-special-functions\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="asm-with-c-special-functions.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: asm-with-c-special-functions.elf
+ 
+arm-none-eabi-size  asm-with-c-special-functions.elf 
+arm-none-eabi-objdump -h -S asm-with-c-special-functions.elf  > "asm-with-c-special-functions.list"
+   text	   data	    bss	    dec	    hex	filename
+    668	      0	   1568	   2236	    8bc	asm-with-c-special-functions.elf
+Finished building: default.size.stdout
+ 
+Finished building: asm-with-c-special-functions.list
+ 
+
+12:37:32 Build Finished. 0 errors, 0 warnings. (took 529ms)
+

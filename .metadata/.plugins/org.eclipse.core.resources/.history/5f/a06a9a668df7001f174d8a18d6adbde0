@@ -1,0 +1,38 @@
+  .syntax unified
+  .cpu cortex-m4
+  .fpu softvfp
+  .thumb
+
+.global  main
+.global SysTick_Handler
+.section .text.SysTick_Handler
+.type SysTick_Handler, %function
+
+
+.extern rcc_config
+.extern moder_config
+.extern flip_led_state
+
+.equ STK_CTRL_ADDR, 0xE000E010
+// led i timer stworz
+// main i przerwanie w asm
+// wywolaj wszystko w .S
+
+
+.text
+
+
+main:
+
+ ldr r0, =STK_CTRL_ADDR
+ bl rcc_config
+ bx lr
+
+/*--------------*/
+SysTick_Handler:
+ push {lr}
+ bl flip_led_state
+ pop {lr}
+
+ bx lr
+/*--------------*/

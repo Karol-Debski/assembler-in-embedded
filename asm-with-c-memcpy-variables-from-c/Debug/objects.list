@@ -1,0 +1,3 @@
+"./Core/Src/data.o"
+"./Core/Src/main.o"
+"./Core/Startup/startup_stm32f407vgtx.o"

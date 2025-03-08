@@ -1,0 +1,26 @@
+/*
+ * led.h
+ *
+ *  Created on: Mar 2, 2025
+ *      Author: Karol
+ */
+
+#ifndef INC_LED_DEF_H_
+#define INC_LED_DEF_H_
+
+ //rcc
+#define RCC_BASE_ADDR 	   0x40023800
+#define RCC_AHB1ENR_OFFSET 0x30
+#define RCC_AHB1ENR_ADDR   (RCC_BASE_ADDR + RCC_AHB1ENR_OFFSET)
+#define GPIOD_CLK_EN       (1U << 3)
+//moder
+#define GPIOD_ADDR                 0x40020C00
+#define GPIOD_MODER_OFFSET         0x0
+#define GPIOD_MODER_ADDR           (GPIOD_ADDR + GPIOD_MODER_OFFSET)
+#define GPIOD_MODER_12_OUTPUT_MODE (0x01 << 24)
+//odr
+#define GPIOD_ODR_OFFSET 0x14
+#define GPIOD_ODR_ADDR   (GPIOD_ADDR + GPIOD_ODR_OFFSET)
+
+
+#endif /* INC_LED_DEF_H_ */
