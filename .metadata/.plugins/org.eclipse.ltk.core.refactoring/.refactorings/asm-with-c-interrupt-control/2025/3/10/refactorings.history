@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;asm-with-c-interrupt-control/Src/special_functions.S&apos; to &apos;interrupt_control.S&apos;" description="Rename resource &apos;special_functions.S&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/special_functions.S" name="interrupt_control.S" stamp="1740915606165" updateReferences="true"/>
+</session>

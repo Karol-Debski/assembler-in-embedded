@@ -1,0 +1,4 @@
+"./Core/Src/led-driver.o"
+"./Core/Src/main.o"
+"./Core/Src/timer-driver.o"
+"./Core/Startup/startup_stm32f407vgtx.o"

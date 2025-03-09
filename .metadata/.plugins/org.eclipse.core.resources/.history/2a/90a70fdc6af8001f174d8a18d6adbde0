@@ -1,0 +1,22 @@
+/*
+ * led.c
+ *
+ *  Created on: Mar 2, 2025
+ *      Author: Karol
+ */
+#include <led_def.h>
+#include <stdint.h>
+
+void flip_led_state(uint32_t* gpio_odr_addr)
+{
+	*gpio_odr_addr ^= (1U << 12);
+}
+void rcc_config(uint32_t* rcc_ahb1_enr_addr)
+{
+   *rcc_ahb1_enr_addr |= (1U << 3);
+};
+
+void moder_config(uint32_t* gpio_moder_addr)
+{
+   *gpio_moder_addr |= (1 << 24);
+}

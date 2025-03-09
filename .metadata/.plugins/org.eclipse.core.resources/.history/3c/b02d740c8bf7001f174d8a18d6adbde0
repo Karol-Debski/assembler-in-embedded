@@ -1,0 +1,16 @@
+/*
+ * led.h
+ *
+ *  Created on: Mar 2, 2025
+ *      Author: Karol
+ */
+
+#ifndef INC_LED_H_
+#define INC_LED_H_
+
+
+void flip_led_state(uint32_t* gpio_odr_addr);
+void rcc_config(uint32_t* rcc_ahb1_enr_addr);
+void moder_config(uint32_t* gpio_moder_addr);
+
+#endif /* INC_LED_H_ */

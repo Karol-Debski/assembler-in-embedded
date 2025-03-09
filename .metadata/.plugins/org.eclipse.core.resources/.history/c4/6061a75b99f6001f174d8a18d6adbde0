@@ -1,0 +1,40 @@
+  .syntax unified
+  .cpu cortex-m4
+  .fpu softvfp
+  .thumb
+
+.global  memcopy_asm
+
+dest_addr_reg .req r0
+src_addr_reg  .req r1
+num_val_reg   .req r2
+cnt_reg       .req r4
+
+.text
+
+/* assumptions from the ABI document:
+r0 - dest
+r1 - src
+r2 - num
+*/
+
+memcopy_asm:
+ push {r4-r5}
+ mov cnt_reg, 0
+
+ push {lr}
+ bl loop
+ pop {lr}
+
+ pop {r4-r5}
+ bx lr
+
+loop:
+ cmp cnt_reg, num_val_reg
+ it eq
+ bxeq lr
+ ldrb r5, [src_addr_reg],  1
+ strb r5, [dest_addr_reg], 1
+ //cnt++
+ add cnt_reg, 1
+ b loop

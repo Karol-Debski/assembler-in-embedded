@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;asm-with-c-special-functions/Src/memcopy.S&apos; to &apos;special_functions.S&apos;" description="Rename resource &apos;memcopy.S&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/memcopy.S" name="special_functions.S" stamp="1740863475039" updateReferences="true"/>
+</session>

@@ -1,0 +1,10 @@
+12:42:27 **** Incremental Build of configuration Debug for project asm-with-c-interrupt-control ****
+make -j8 all 
+arm-none-eabi-size  asm-with-c-interrupt-control.elf 
+   text	   data	    bss	    dec	    hex	filename
+    668	      0	   1568	   2236	    8bc	asm-with-c-interrupt-control.elf
+Finished building: default.size.stdout
+ 
+
+12:42:28 Build Finished. 0 errors, 0 warnings. (took 213ms)
+

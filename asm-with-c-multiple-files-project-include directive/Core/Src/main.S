@@ -1,0 +1,39 @@
+  .syntax unified
+  .cpu cortex-m4
+  .fpu softvfp
+  .thumb
+
+.global  main
+.global SysTick_Handler
+.section .text.SysTick_Handler
+.type SysTick_Handler, %function
+
+.include "led-driver.S"
+.include "timer-driver.S"
+
+
+.text
+
+main:
+
+ bl rcc_config
+ bl moder_config
+
+ bl SysTickTimerConfig
+
+ bl EnalbeCounter
+
+ b inf_loop
+
+
+/*--------------*/
+inf_loop:
+ b inf_loop
+/*--------------*/
+SysTick_Handler:
+ push {lr}
+ bl flip_led_state
+ pop {lr}
+
+ bx lr
+/*--------------*/

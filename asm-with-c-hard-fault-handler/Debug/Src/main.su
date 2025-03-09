@@ -1,0 +1,2 @@
+../Src/main.c:53:29:HardFault_Handler	0	static,ignoring_inline_asm
+../Src/main.c:71:5:main	16	static

@@ -1,0 +1,2 @@
+../Src/main.c:26:6:memcopy_inline	24	static,ignoring_inline_asm
+../Src/main.c:31:5:main	16	static

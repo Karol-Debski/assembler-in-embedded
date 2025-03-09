@@ -1,0 +1,4 @@
+"./Core/Src/main.o"
+"./Core/Startup/startup_stm32f407vgtx.o"
+"./Drivers/Src/led.o"
+"./Drivers/Src/systick.o"

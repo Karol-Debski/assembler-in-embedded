@@ -1,0 +1,10 @@
+20:16:38 **** Incremental Build of configuration Debug for project asm-with-c-multiple-files-project ****
+make -j8 all 
+arm-none-eabi-size  asm-with-c-multiple-files-project.elf 
+   text	   data	    bss	    dec	    hex	filename
+    800	      0	   1568	   2368	    940	asm-with-c-multiple-files-project.elf
+Finished building: default.size.stdout
+ 
+
+20:16:38 Build Finished. 0 errors, 0 warnings. (took 230ms)
+
