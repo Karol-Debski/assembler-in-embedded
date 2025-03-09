@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:asm-with-c-interrupt-control-inline,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:asm-with-c-special-functions-inline,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:asm-with-c-hard-fault-handler
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:asm-calculator (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:asm-calculator,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:asm-cpu-flags-check (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:asm-cpu-flags-check,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:asm-memcopy,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:asm-template
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:asm-calculator\ (1)/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:asm-calculator\ (1)/activeLaunchTarget=null\:---
